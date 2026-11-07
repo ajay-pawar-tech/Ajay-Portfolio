@@ -1,0 +1,22 @@
+/* Responsive styles for tablets and mobile devices. */
+
+@media (max-width: 700px) {
+  header {
+    padding: 20px 5%;
+  }
+
+  nav {
+    align-items: flex-start;
+    gap: 18px;
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  section {
+    padding: 72px 5%;
+  }
+}

@@ -1,0 +1,1 @@
+Place your profile photo and portfolio images in this folder.\n
