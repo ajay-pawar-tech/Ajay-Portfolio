@@ -3248,3 +3248,81 @@ a {
 
 }
 
+/* =========================================
+   AURA GLASS EFFECT - GLOBAL PORTFOLIO
+========================================= */
+
+:root {
+    --glass-orange: 255, 106, 0;
+}
+
+.service-card,
+.skill-card,
+.project-card,
+.featured-project,
+.certification-card,
+.document-card,
+.resume-info,
+.resume-preview,
+.resume-card,
+.contact-card,
+.detail-item,
+.stat-box {
+    position: relative;
+    isolation: isolate;
+}
+
+/* CURSOR FOLLOWING GLOW */
+.service-card::after,
+.skill-card::after,
+.project-card::after,
+.featured-project::after,
+.certification-card::after,
+.document-card::after,
+.resume-info::after,
+.resume-preview::after,
+.resume-card::after,
+.contact-card::after,
+.detail-item::after,
+.stat-box::after {
+
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+
+    background: radial-gradient(
+        350px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+        rgba(var(--glass-orange), 0.16),
+        transparent 70%
+    );
+
+    opacity: 0;
+    transition: opacity 0.35s ease;
+
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* SHOW GLOW ON HOVER */
+@media (hover: hover) and (pointer: fine) {
+
+    .service-card:hover::after,
+    .skill-card:hover::after,
+    .project-card:hover::after,
+    .featured-project:hover::after,
+    .certification-card:hover::after,
+    .document-card:hover::after,
+    .resume-info:hover::after,
+    .resume-preview:hover::after,
+    .resume-card:hover::after,
+    .contact-card:hover::after,
+    .detail-item:hover::after,
+    .stat-box:hover::after {
+
+        opacity: 1;
+    }
+
+}
+
+
