@@ -3325,4 +3325,80 @@ a {
 
 }
 
+/* =========================================
+   STEP 3 - PREMIUM GLASS BORDER & SHINE
+========================================= */
+
+.service-card,
+.skill-card,
+.project-card,
+.featured-project,
+.certification-card,
+.document-card,
+.resume-info,
+.resume-preview,
+.resume-card,
+.contact-card,
+.detail-item,
+.stat-box {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    transition:
+        border-color 0.4s ease,
+        box-shadow 0.4s ease,
+        background 0.4s ease;
+}
+
+/* PREMIUM GLASS HOVER */
+@media (hover: hover) and (pointer: fine) {
+
+    .service-card:hover,
+    .skill-card:hover,
+    .project-card:hover,
+    .featured-project:hover,
+    .certification-card:hover,
+    .document-card:hover,
+    .resume-info:hover,
+    .resume-preview:hover,
+    .resume-card:hover,
+    .contact-card:hover,
+    .detail-item:hover,
+    .stat-box:hover {
+
+        border-color: rgba(255, 106, 0, 0.8);
+
+        box-shadow:
+            0 15px 45px rgba(255, 106, 0, 0.15),
+            0 0 20px rgba(255, 106, 0, 0.10),
+            inset 0 1px 0 rgba(255, 255, 255, 0.12);
+
+        background-color: rgba(35, 25, 18, 0.75);
+    }
+
+}
+
+/* ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+
+    .service-card,
+    .skill-card,
+    .project-card,
+    .featured-project,
+    .certification-card,
+    .document-card,
+    .resume-info,
+    .resume-preview,
+    .resume-card,
+    .contact-card,
+    .detail-item,
+    .stat-box {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        transition: none;
+    }
+
+}
+
+
 
