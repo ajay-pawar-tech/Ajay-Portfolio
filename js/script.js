@@ -46,6 +46,41 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     typeRole();
+    
+    // =====================================
+    // AURA GLASS - MOUSE FOLLOWING GLOW
+    // =====================================
+
+    const glassCards = document.querySelectorAll(`
+        .service-card,
+        .skill-card,
+        .project-card,
+        .featured-project,
+        .certification-card,
+        .document-card,
+        .resume-info,
+        .resume-preview,
+        .resume-card,
+        .contact-card,
+        .detail-item,
+        .stat-box
+    `);
+
+    glassCards.forEach(function (card) {
+
+        card.addEventListener("mousemove", function (event) {
+
+            const rect = card.getBoundingClientRect();
+
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            card.style.setProperty("--mouse-x", `${x}px`);
+            card.style.setProperty("--mouse-y", `${y}px`);
+
+        });
+
+    });
 
 
     // =====================================
