@@ -134,3 +134,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 });
+<script>
+    const loadResumeBtn = document.getElementById("loadResumeBtn");
+    const resumeFrame = document.getElementById("resumeFrame");
+    const resumeFrameContainer = document.getElementById("resumeFrameContainer");
+
+    loadResumeBtn.addEventListener("click", function () {
+
+        resumeFrame.src = "assets/resume/Ajay_Pawar_AI_Engineer_al.pdf";
+
+        resumeFrameContainer.style.display = "block";
+
+        loadResumeBtn.style.display = "none";
+
+    });
+</script>
