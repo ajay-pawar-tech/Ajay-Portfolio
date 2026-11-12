@@ -3094,3 +3094,157 @@ a {
         gap: 12px;
     }
 }
+
+/* =========================================
+   PREMIUM HOVER EFFECTS - BLACK & ORANGE
+   AJAY PAWAR PORTFOLIO
+========================================= */
+
+/* PROJECT CARDS */
+@media (hover: hover) and (pointer: fine) {
+
+    .project-card {
+        transform: translateY(0);
+        transition:
+            transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+            border-color 0.4s ease,
+            box-shadow 0.4s ease,
+            background 0.4s ease;
+        will-change: transform;
+    }
+
+    .project-card:hover {
+        transform: translateY(-12px) scale(1.02);
+        border-color: #FF6A00;
+        background: linear-gradient(145deg, #202020, #111111);
+        box-shadow:
+            0 18px 45px rgba(255, 106, 0, 0.16),
+            0 0 20px rgba(255, 106, 0, 0.08);
+    }
+
+    .project-card-icon {
+        transition: all 0.4s ease;
+    }
+
+    .project-card:hover .project-card-icon {
+        transform: rotate(-8deg) scale(1.12);
+        box-shadow: 0 0 25px rgba(255, 106, 0, 0.35);
+    }
+
+
+    /* SKILL CARDS */
+    .skill-card {
+        transition:
+            transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1),
+            border-color 0.4s ease,
+            box-shadow 0.4s ease;
+        will-change: transform;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-12px) scale(1.02);
+        border-color: #FF6A00;
+        box-shadow:
+            0 18px 45px rgba(255, 106, 0, 0.16),
+            0 0 20px rgba(255, 106, 0, 0.08);
+    }
+
+    .skill-card-header i {
+        transition: all 0.4s ease;
+    }
+
+    .skill-card:hover .skill-card-header i {
+        transform: rotate(8deg) scale(1.12);
+        box-shadow: 0 0 28px rgba(255, 106, 0, 0.45);
+    }
+
+
+    /* FEATURED PROJECT */
+    .featured-project {
+        transition:
+            transform 0.45s ease,
+            border-color 0.4s ease,
+            box-shadow 0.4s ease;
+    }
+
+    .featured-project:hover {
+        transform: translateY(-6px);
+        border-color: #FF6A00;
+        box-shadow: 0 20px 55px rgba(255, 106, 0, 0.16);
+    }
+
+
+    /* PREMIUM BUTTON EFFECTS */
+    .btn,
+    .project-btn,
+    .hire-btn,
+    .resume-btn,
+    .about-social-btn,
+    .document-card a {
+        transition:
+            transform 0.3s ease,
+            box-shadow 0.3s ease,
+            background 0.3s ease,
+            color 0.3s ease,
+            border-color 0.3s ease;
+    }
+
+    .btn:hover,
+    .project-btn:hover,
+    .hire-btn:hover,
+    .resume-btn:hover,
+    .about-social-btn:hover,
+    .document-card a:hover {
+        transform: translateY(-4px) scale(1.03);
+        box-shadow: 0 8px 25px rgba(255, 106, 0, 0.25);
+    }
+
+    /* BUTTON CLICK */
+    .btn:active,
+    .project-btn:active,
+    .hire-btn:active,
+    .resume-btn:active,
+    .about-social-btn:active,
+    .document-card a:active {
+        transform: scale(0.97);
+    }
+
+}
+
+
+/* KEYBOARD ACCESSIBILITY */
+.project-card:focus-within,
+.skill-card:focus-within {
+    outline: 1px solid rgba(255, 106, 0, 0.7);
+    outline-offset: 3px;
+}
+
+.btn:focus-visible,
+.project-btn:focus-visible,
+.hire-btn:focus-visible,
+.resume-btn:focus-visible {
+    outline: 2px solid #FF6A00;
+    outline-offset: 4px;
+}
+
+
+/* REDUCED MOTION ACCESSIBILITY */
+@media (prefers-reduced-motion: reduce) {
+
+    .project-card,
+    .project-card-icon,
+    .skill-card,
+    .skill-card-header i,
+    .featured-project,
+    .btn,
+    .project-btn,
+    .hire-btn,
+    .resume-btn,
+    .about-social-btn,
+    .document-card a {
+        transition: none !important;
+        transform: none !important;
+    }
+
+}
+
