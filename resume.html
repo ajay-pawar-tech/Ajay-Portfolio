@@ -114,29 +114,38 @@
 
 
                 <!-- RESUME PREVIEW -->
-                <div class="resume-preview">
+<div class="resume-preview">
 
-                    <h3>
-                        <i class="fa-solid fa-file-pdf"></i>
-                        Resume Preview
-                    </h3>
+    <h3>
+        <i class="fa-solid fa-file-pdf"></i>
+        Resume Preview
+    </h3>
 
-                    <iframe
-                        src="assets/resume/Ajay_Pawar_AI_Engineer_al.pdf"
-                        title="Ajay Pawar AI Engineer Resume Preview"
-                        loading="lazy">
-                    </iframe>
+    <button
+        type="button"
+        class="resume-btn view-resume"
+        id="loadResumeBtn">
 
-                </div>
+        <i class="fa-solid fa-eye"></i>
+        View Resume Preview
 
-            </div>
+    </button>
 
-        </section>
+    <div id="resumeFrameContainer" style="display: none;">
 
-    </main>
+        <iframe
+            id="resumeFrame"
+            title="Ajay Pawar AI Engineer Resume Preview"
+            loading="lazy"
+            width="100%"
+            height="600">
+        </iframe>
 
+    </div>
 
-    <!-- FOOTER -->
+</div>
+
+<!-- FOOTER -->
     <footer class="footer">
 
         <div class="footer-content">
