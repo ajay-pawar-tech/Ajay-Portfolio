@@ -49,22 +49,43 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // =====================================
     // AURA GLASS - MOUSE FOLLOWING GLOW
-    // =====================================
+    // ====================================
 
-    const glassCards = document.querySelectorAll(`
-        .service-card,
-        .skill-card,
-        .project-card,
-        .featured-project,
-        .certification-card,
-        .document-card,
-        .resume-info,
-        .resume-preview,
-        .resume-card,
-        .contact-card,
-        .detail-item,
-        .stat-box
-    `);
+const glassCards = document.querySelectorAll(`
+    .service-card,
+    .skill-card,
+    .project-card,
+    .featured-project,
+    .certification-card,
+    .certificate-card,
+    .document-card,
+    .resume-info,
+    .resume-preview,
+    .resume-card,
+    .contact-card,
+    .contact-info,
+    .contact-form-wrapper,
+    .education-card,
+    .training-card,
+    .detail-item,
+    .stat-box
+`);
+
+glassCards.forEach(function (card) {
+
+    card.addEventListener("pointermove", function (event) {
+
+        const rect = card.getBoundingClientRect();
+
+        const x = event.clientX - rect.left;
+        const y = event.clientY - rect.top;
+
+        card.style.setProperty("--mouse-x", `${x}px`);
+        card.style.setProperty("--mouse-y", `${y}px`);
+
+    });
+
+});
 
     glassCards.forEach(function (card) {
 
